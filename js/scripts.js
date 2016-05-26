@@ -1,15 +1,19 @@
 $(document).ready(function() {
-  $("form").submit(function() {
-    var nameInput = $("input#name").val();
-    var foodType = $("input#foodType").val();
-    var priceRange = $("input#priceRange").val();
-    var distance = $("input#distance").val();
-    var happyHour = $("input#happyHour").val();
+  $("form").submit(function(event) {
+    var person = $("input#person").val();
+    var foodType = $("select#foodType").val();
+    var priceRange = $( "input:checkbox:checked" ).val();
+    var happyHour = $("input:radio[name=optionsRadios]:checked").val();
 
-    (".name").text(nameInput);
-    (".foodType").text(foodType);
-    (".priceRange").text(priceRange);
-    (".distance").text(distance);
-    (".happyHour").text(happyHour);
-});
+    $(".name").text(person);
+    $(".foodType").text(foodType);
+    $(".priceRange").text(priceRange);
+    $(".happyHour").text(happyHour);
+
+    $("#surveyResults").show();
+
+
+    event.preventDefault();
+
+  });
 });

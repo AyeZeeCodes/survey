@@ -23,28 +23,61 @@
         <div class="col-sm-12 col-md-12 col-lg-12">
       <form>
           <div class="form-group">
-            <label for="name">Name</label>
-            <input id="name" class="form-control" type="text">
+            <label>Name</label>
+            <input id="person" name="person" class="form-control" type="text">
           </div>
-          <div class="form-group">
+        <div class="form-group">
             <label for="foodType">Food type</label>
-            <input id="foodType" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="priceRange">Price range</label>
-            <input id="priceRange" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="distance">Distance</label>
-            <input id="distance" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="happyHour">Happy hour</label>
-            <input id="happyHour" class="form-control" type="text">
+            <select id="foodType" class="form-control">
+              <option value="Mexican">Mexican</option>
+              <option value="Italian">Italian</option>
+              <option value="Asian">Asian</option>
+              <option value="Burgers">Burgers</option>
+              <option value="European">European</option>
+          </select>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="cheap">
+            $
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="affordable">
+            $$
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="expensive">
+            $$$
+          </label>
+        </div>
+
+        <div class="form-group">
+            <label for="happyHour">Happy Hour</label><br />
+            <label>
+            <input type="radio" name="optionsRadios" id="yes" value="yes" checked>
+              Yes
+            </label>
+            <label>
+            <input type="radio" name="optionsRadios" id="no" value="no" checked>
+            No
+            </label>
           </div>
 
-          <button type="submit" class="btn btn-primary">Show me the story!</button>
+          <button type="submit" class="btn btn-primary">Send Me Places To Eat!</button>
         </form>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <div id="surveyResults">
+          Hi <span class="name"></span>, you selected <span class="foodType"></span> as your favorite food. You also said you wanted it in the <span class="priceRange"></span> price range. Excellent. Happy hour is <span class="happyHour"></span>
+
+          <h2>We Recommend</h2>
+          <img width="300" src="http://s3-media1.fl.yelpcdn.com/bphoto/P04fz93GEj-ygGksyHdk3w/348s.jpg" alt="" />
+          <h4>Killer Burger</h4>
+          They have burgers that are cheap within 1 mile of you and happy hour is going on now.</p>
       </div>
     </div>
   </div>
